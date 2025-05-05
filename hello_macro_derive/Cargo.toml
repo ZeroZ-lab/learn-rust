@@ -1,0 +1,13 @@
+[package]
+name = "hello_macro_derive"
+version = "0.1.0"
+edition = "2021"
+
+# 关键：声明这是一个过程宏 crate
+[lib]
+proc-macro = true
+
+# 添加必要的依赖项
+[dependencies]
+syn = "2.0"   # 用于解析 Rust 代码 (可以使用较新的兼容版本)
+quote = "1.0" # 用于生成 Rust 代码 (可以使用较新的兼容版本)
